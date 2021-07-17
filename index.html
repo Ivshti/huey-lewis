@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<style>
+
+		html, body { margin: 0px; padding: 0px; background-color: #333; color: white; font-family: arial sans-serif; }
+ 		#album { background-size: 100% 100%; width: 77px; height: 77px; position: absolute; transform: rotate(-28deg);
+bottom: 67px;
+left: 250px; }
+		/* 600*1.5/2 */
+		#patrick { width: 600px; height: 450px; background-image: url("./patrick.jpg"); position: relative; perspective: 100px; }
+		#finger { width: 100%; height: 100%; background-image: url("finger.png"); transform: rotate(0deg); }
+		#patrick, #finger { background-size: 100%; }
+	</style>
+
+	<body>
+		<form id="albumForm" onsubmit="event.preventDefault(); album.style.backgroundImage = `url('${albumCover.value}')`">
+			Enter album cover URL: <input id="albumCover" type="text"/>
+			<input type="submit" value="Go"/>
+		</form>
+		<div id="patrick">
+			<div id="album"></div>
+			<div id="finger"></div>
+		</div>
+
+	</body>
+</html>
